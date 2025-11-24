@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sosmed Kenzy</title>
+
+  <!-- Font Permanent Marker -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body, html {height:100%; font-family: Arial, sans-serif; color:white; overflow:hidden;}
+
+    body {
+    background-image: url(img.jpg) ;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+    .container {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100%;
+      text-align:center;
+    }
+
+    .profile {
+      width:150px; height:150px;
+      border-radius:50%;
+      border:4px solid white;
+      overflow:hidden;
+      animation: float 3s ease-in-out infinite;
+    }
+    .profile video {
+      width:100%; height:100%;
+      object-fit:cover;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* === Teks Sosmed Kenzy - Putih dengan glow kuning & biru === */
+    h1 {
+      margin-top:15px;
+      font-size:26px;
+      font-family: "Permanent Marker", cursive;
+      color:#ffffff;
+      text-shadow:
+        0 0 10px #00b7ff,
+        0 0 20px #00b7ff,
+        0 0 30px #fff700,
+        0 0 45px #fff700,
+        0 0 60px #00b7ff;
+      animation: dualGlow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes dualGlow {
+      from {
+        text-shadow:
+          0 0 10px #000000,
+          0 0 20px #000000,
+          0 0 30px #000000,
+          0 0 45px #000000,
+          0 0 60px #000000;
+      }
+      to {
+        text-shadow:
+          0 0 20px #00b7ff,
+          0 0 40px #00b7ff,
+          0 0 60px #fff700,
+          0 0 90px #fff700,
+          0 0 120px #00b7ff;
+      }
+    }
+
+    .sosmed {
+      margin-top:25px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      width:230px;
+    }
+    .sosmed a {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px;
+      border-radius:12px;
+      font-weight:bold;
+      text-decoration:none;
+      color:white;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      transition:transform 0.2s, opacity 0.2s;
+    }
+    .sosmed a:hover {
+      transform:scale(1.05);
+      opacity:0.9;
+    }
+    .wa {background:#25D366;}
+    .ch-wa {background:#128C7E;}
+    .tg {background:#0088cc;}
+    .ig {background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);}
+    .yt {background:#FF0000;}
+    .tt {background:#000000;}
+
+    .music-player {
+      margin-top:20px;
+      background:rgba(0,0,0,0.75);
+      border-radius:15px;
+      padding:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.5);
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      width:230px;
+    }
+    .player-top {
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .cover-video {
+      width:50px; height:50px;
+      border-radius:10px;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+    .cover-video video {
+      width:100%; height:100%;
+      object-fit:cover;
+    }
+    .track-info h4 {margin:0; font-size:14px;}
+    .track-info p {margin:0; font-size:11px; color:#ccc;}
+    .controls {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+    }
+    .controls button {
+      background:none;
+      border:none;
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+    }
+    .progress {
+      width:100%;
+      height:4px;
+      background:#555;
+      border-radius:3px;
+      overflow:hidden;
+    }
+    .progress-bar {
+      height:100%;
+      width:0%;
+      background:#000000;
+      transition:width 0.2s linear;
+    }
+
+    .watermark {
+      position: fixed;
+      bottom:5px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:11px;
+      opacity:0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <video autoplay muted loop playsinline>
+        <source src="https://files.catbox.moe/kzj6u5.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h1>Sosmed Kenzy</h1>
+
+    <div class="sosmed">
+      <a href="https://wa.me/6285520940468" target="_blank" class="wa">WhatsApp</a>
+      <a href="https://whatsapp.com/channel/0029VbBqbY44yltRYOrAV90e" target="_blank" class="ch-wa">Channel WA</a>
+      <a href="https://t.me/keanudelta" target="_blank" class="tg">Telegram</a>
+      <a href="https://www.instagram.com/kkyken_?igsh=MXUxdzBlcG4xdHZsMQ==" target="_blank" class="ig">Instagram</a>
+      <a href="https://www.youtube.com/@kenzyytseca" class="yt">YouTube</a>
+      <a href="https://www.tiktok.com/@kenzyesteban?_r=1&_t=ZS-91fSQx6pCnU" target="_blank" class="tt">TikTok</a>
+    </div>
+
+    <div class="music-player">
+      <div class="player-top">
+        <div class="cover-video">
+          <video id="musicVideo" preload="metadata">
+            <source src="https://files.catbox.moe/vzwp98.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="track-info">
+          <h4>About You</h4>
+          <p>The 1975</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">⏮️</button>
+        <button id="playBtn">▶️</button>
+        <button id="nextBtn">⏭️</button>
+      </div>
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="watermark">Powered by Kenzy</div>
+
+  <script>
+    const musicVideo = document.getElementById("musicVideo");
+    const playBtn = document.getElementById("playBtn");
+    const progressBar = document.getElementById("progressBar");
+    let isPlaying = false;
+
+    playBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        musicVideo.play();
+        playBtn.textContent = "⏸️";
+      } else {
+        musicVideo.pause();
+        playBtn.textContent = "▶️";
+      }
+      isPlaying = !isPlaying;
+    });
+
+    musicVideo.addEventListener("timeupdate", () => {
+      const progress = (musicVideo.currentTime / musicVideo.duration) * 100;
+      progressBar.style.width = progress + "%";
+    });
+  </script>
+</body>
+</html>
